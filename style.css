@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: rgb(222, 126, 182);
+}
+ul{
+    padding: 18px;
+}
+ul li{
+    list-style:square;
+    padding: 6px;
+    min-height: 40px;
+}
+p{
+    padding: 20px 0px;
+}
+a{
+    color: black;
+    display: flex;
+}
+svg{
+    width: 14px;
+    padding-bottom: 5px;
+}
+h2{
+    background-color: rgb(222, 126, 182);
+    color: rgb(235, 224, 234);
+    max-width: 400px;
+    min-height: 50px;
+    padding: 20px;
+}
+
+.container{
+    background-color: white;
+    max-width: 1200px;
+    min-height: 600px;
+    width: 100%;
+    margin: 80px auto;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.627);
+    border-radius: 8px;
+
+    #profile{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #img_container{
+            max-width: 200px;
+            max-height: 200px;
+            width: 100%;
+            padding: 3px;
+            border: 2px solid pink;
+            border-radius: 100%;
+
+            img{
+                width: 100%;
+                border-radius: 100%;
+                border: 2px solid black;
+            }
+        }
+        h1{
+            margin-top: 25px;
+        }
+        h3{
+            margin-top: 10px;
+        }
+    }
+
+    #information{
+        margin-top: 40px;
+        padding: 60px;
+        display: grid;
+        gap: 43px 23px;
+        grid-template-areas: "top-left top-right"
+        "mid mid"
+        "bottom-left bottom-right";
+        grid-template-columns: 1fr 1fr;
+
+
+        #personal_info{
+            grid-area: top-left;
+            grid: 1;
+        }
+        #career_obj{
+            grid-area: top-right;
+        }
+        #education{
+            grid-area: mid;
+        }
+        #skills{
+            grid-area: bottom-left;
+        }
+        #interests{
+            grid-area: bottom-right;
+        }
+    }
+}
