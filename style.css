@@ -122,6 +122,7 @@ h2 {
     width: 95%;
 
     #profile{
+        padding: 30px 20px 10px 20px;
         #img_container{
             max-width: 150px;
             height: 150px;
@@ -135,8 +136,9 @@ h2 {
     }
 
     #information {
+        margin-top: 0px;
         display: block;
-        padding: 20px;
+        padding: 10px 20px;
         div{
             margin: 20px 0px;
         }
