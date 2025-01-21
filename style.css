@@ -1,103 +1,150 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+:root {
+  --primary: rgb(125 231 206);
+  --secondary: rgb(93 184 163);
+  --dark: rgb(49, 91, 81);
 }
 
-body{
-    background-color: rgb(222, 126, 182);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
-ul{
-    padding: 18px;
+
+body {
+  background-color: var(--primary);
 }
-ul li{
-    list-style:square;
-    padding: 6px;
-    min-height: 40px;
+ul {
+  padding: 18px;
 }
-p{
-    padding: 20px 0px;
+ul li {
+  list-style: square;
+  padding: 6px;
+  min-height: 40px;
 }
-a{
-    color: black;
+p {
+  padding: 20px 0px;
+}
+a {
+  color: black;
+  display: flex;
+}
+svg {
+  width: 14px;
+  padding-bottom: 5px;
+}
+h2 {
+  background-color: var(--secondary);
+  color: rgb(235, 224, 234);
+  min-height: 50px;
+  padding: 20px;
+}
+
+.container {
+  background-color: white;
+  max-width: 1200px;
+  min-height: 600px;
+  width: 100%;
+  margin: 80px auto;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.627);
+  border-radius: 8px;
+
+  #profile {
+    padding: 40px;
     display: flex;
-}
-svg{
-    width: 14px;
-    padding-bottom: 5px;
-}
-h2{
-    background-color: rgb(222, 126, 182);
-    color: rgb(235, 224, 234);
-    max-width: 400px;
-    min-height: 50px;
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+
+    #img_container {
+      max-width: 200px;
+      max-height: 200px;
+      width: 100%;
+      padding: 2px;
+      border: 5px solid var(--secondary);
+      border-radius: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 100%;
+        border: 4px solid var(--primary);
+      }
+    }
+    h1 {
+      margin-top: 25px;
+      color: var(--dark);
+    }
+    h3 {
+      margin-top: 10px;
+    }
+  }
+
+  #information {
+    margin-top: 40px;
+    padding: 60px;
+    display: grid;
+    gap: 43px 23px;
+    grid-template-areas:
+      "top-left top-right"
+      "bottom-left bottom-right"
+      "mid mid";
+    grid-template-columns: 1fr 1fr;
+
+    #personal_info {
+      grid-area: top-left;
+      grid: 1;
+    }
+    #career_obj {
+      grid-area: top-right;
+      text-align: justify;
+    }
+    #education {
+      grid-area: mid;
+    }
+    #skills {
+      grid-area: bottom-left;
+    }
+    #interests {
+      grid-area: bottom-right;
+    }
+  }
 }
 
-.container{
-    background-color: white;
-    max-width: 1200px;
-    min-height: 600px;
-    width: 100%;
-    margin: 80px auto;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.627);
-    border-radius: 8px;
+@media only screen and (width<1240px) {
+  .container {
+    width: 95%;
+  }
+  h2 {
+    font-size: 22px;
+  }
+}
+@media only screen and (width<700px) {
+  .container {
+    width: 95%;
 
     #profile{
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
         #img_container{
-            max-width: 200px;
-            max-height: 200px;
-            width: 100%;
-            padding: 3px;
-            border: 2px solid pink;
-            border-radius: 100%;
-
-            img{
-                width: 100%;
-                border-radius: 100%;
-                border: 2px solid black;
-            }
+            max-width: 150px;
+            height: 150px;
         }
         h1{
-            margin-top: 25px;
+            font-size: 22px;
         }
         h3{
-            margin-top: 10px;
+            font-size: 14px;
         }
     }
 
-    #information{
-        margin-top: 40px;
-        padding: 60px;
-        display: grid;
-        gap: 43px 23px;
-        grid-template-areas: "top-left top-right"
-        "mid mid"
-        "bottom-left bottom-right";
-        grid-template-columns: 1fr 1fr;
+    #information {
+        display: block;
+        padding: 20px;
+        div{
+            margin: 20px 0px;
+        }
 
-
-        #personal_info{
-            grid-area: top-left;
-            grid: 1;
-        }
-        #career_obj{
-            grid-area: top-right;
-        }
-        #education{
-            grid-area: mid;
-        }
-        #skills{
-            grid-area: bottom-left;
-        }
-        #interests{
-            grid-area: bottom-right;
-        }
     }
+  h2 {
+    font-size: 18px;
+    min-height: 30px;
+  }
+  }
 }
