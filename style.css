@@ -120,6 +120,7 @@ h2 {
 @media only screen and (width<700px) {
   .container {
     width: 95%;
+    margin: 40px auto;
 
     #profile{
         padding: 30px 20px 10px 20px;
